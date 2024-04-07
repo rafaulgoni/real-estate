@@ -1,4 +1,4 @@
-import { FaGithub, FaGoogle } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 import 'animate.css';
 
@@ -8,10 +8,10 @@ const Register = () => {
             <div className="hero bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold animate__animated animate__bounce">Create an account</h1>
-                        <p className="py-2 max-w-[500px]">Kindly provide your personal information to create an account by filling out the registration form. Your details will be used to set up your account and facilitate your access to our platform.</p>
+                        <h1 className="text-4xl font-bold animate__animated animate__backInLeft">Create an account</h1>
+                        <p className="py-2 max-w-[500px] animate__animated animate__backInRight">Kindly provide your personal information to create an account by filling out the registration form. Your details will be used to set up your account and facilitate your access to our platform.</p>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 animate__animated animate__backInUp">
                         <form className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -50,11 +50,6 @@ const Register = () => {
                         <div className="text-center p-3">
                             <p>Already have an account? <Link to='/login'><u className="font-bold text-[#F9A51A]">Login</u></Link></p>
                         </div>
-                    </div>
-                    <div className=" space-y-2">
-                        <div className="divider">Or</div>
-                        <button className="border border-blue-800 btn w-full text-blue-600 font-bold"><FaGoogle/>Continue with Google</button>
-                        <button className="border border-black btn w-full font-bold"><FaGithub/>Continue with Github</button>
                     </div>
                 </div>
             </div>

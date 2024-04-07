@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import 'animate.css';
 
 const Navbar = () => {
     const links = <>
@@ -17,7 +18,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="text-xl">daisyUI</a>
+                <h1 className=" text-xl lg:text-2xl font-bold animate__animated animate__swing">Luxe Haven<span className=" text-[#F9A51A]">{`'`}</span>s</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex space-x-4 px-1">
@@ -25,6 +26,24 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+
+                <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src={'https://i.ibb.co/0G1BfzS/rafaul.jpg'} alt="" />
+                        </div>
+                    </div>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li><a>Rafaul Goni Ansari</a></li>
+                        <li>
+                            <a className="justify-between">
+                                Profile
+                                <span className="badge">New</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
                 <a className="btn btn-sm font-bold bg-[#F9A51A]">Login</a>
             </div>
         </div>

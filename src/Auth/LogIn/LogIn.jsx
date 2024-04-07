@@ -8,9 +8,9 @@ const LogIn = () => {
             <div className="hero">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold animate__animated animate__swing">Login now!</h1>
+                        <h1 className="text-5xl font-bold animate__animated animate__backInDown">Login now!</h1>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 animate__animated animate__backInUp">
                         <form className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -37,8 +37,8 @@ const LogIn = () => {
                     </div>
                     <div className=" space-y-2">
                         <div className="divider">Or</div>
-                        <button className="border border-blue-800 btn w-full text-blue-600 font-bold"><FaGoogle/>Continue with Google</button>
-                        <button className="border border-black btn w-full font-bold"><FaGithub/>Continue with Github</button>
+                        <button className="border border-blue-800 btn w-full text-blue-600 font-bold animate__animated animate__backInLeft"><FaGoogle/>Continue with Google</button>
+                        <button className="border border-black btn w-full font-bold animate__animated animate__backInRight"><FaGithub/>Continue with Github</button>
                     </div>
                 </div>
             </div>
