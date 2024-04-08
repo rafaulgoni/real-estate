@@ -3,8 +3,13 @@ import 'animate.css';
 
 const Navbar = () => {
     const links = <>
+    
         <li><NavLink to='/' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Home</NavLink></li>
+        
+        <li><NavLink to='/contact' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Contact Us</NavLink></li>
+
         <li><NavLink to='/login' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Log in</NavLink></li>
+        
     </>
 
     return (

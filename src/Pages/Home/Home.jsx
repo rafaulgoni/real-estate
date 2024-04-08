@@ -1,4 +1,7 @@
+import Agent from "../../Components/Agents/Agent";
 import Banner from "../../Components/Banner/Banner";
+import Card from "../../Components/Card/Card";
+import Discount from "../../Components/Discount/Discount";
 import IntroCard from "../../Components/Intro/IntroCard";
 
 const Home = () => {
@@ -11,8 +14,15 @@ const Home = () => {
                     <IntroCard></IntroCard>
                 </div>
             </div>
-            
-            <h1>Home</h1>
+            <div className="mt-10">
+                <Discount></Discount>
+            </div>
+            <div>
+                <Card></Card>
+            </div>
+            <div className="mt-10">
+                <Agent></Agent>
+            </div>
         </div>
     );
 };
