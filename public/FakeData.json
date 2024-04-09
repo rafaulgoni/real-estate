@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Luxury Penthouse with Ocean View",
+    "segment_name": "Penthouse",
+    "description": "Beautiful penthouse offering stunning ocean views, located in a prime area.",
+    "price": "$2,500,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "Miami Beach, Florida",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/Zz4rrbD/1.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Beachfront Villa Retreat",
+    "segment_name": "Villas",
+    "description": "Exquisite villa nestled along the coastline, providing a serene and private retreat.",
+    "price": "$3,200,000",
+    "status": "sale",
+    "area": "4000 sq ft",
+    "location": "Maui, Hawaii",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/F3pMT8w/2.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Secluded Island Paradise",
+    "segment_name": "Private Island",
+    "description": "Own your private island escape with pristine beaches and lush landscapes.",
+    "price": "$10,000,000",
+    "status": "sale",
+    "area": "20 acres",
+    "location": "Caribbean Sea",
+    "facilities": ["beachfront", "villa", "private beach"],
+    "image": "https://i.ibb.co/ngx22vP/3.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Exclusive Resort Retreat",
+    "segment_name": "Resorts",
+    "description": "Luxurious resort offering world-class amenities and unparalleled service.",
+    "price": "$5,500,000",
+    "status": "sale",
+    "area": "50 acres",
+    "location": "French Polynesia",
+    "facilities": ["spa", "private beach", "gourmet dining"],
+    "image": "https://i.ibb.co/qWYKDDp/four4.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Grand Mansion Estate",
+    "segment_name": "Mansions",
+    "description": "Palatial mansion showcasing elegance and sophistication in every detail.",
+    "price": "$8,800,000",
+    "status": "sale",
+    "area": "10,000 sq ft",
+    "location": "Beverly, California",
+    "facilities": ["home theater", "wine cellar", "pool house"],
+    "image": "https://i.ibb.co/h9p3Hvn/5.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Stunning Beachfront Condo",
+    "segment_name": "Beachfront properties",
+    "description": "Modern condo offering panoramic ocean views and direct beach access.",
+    "price": "$800,000",
+    "status": "sale",
+    "area": "1500 sq ft",
+    "location": "Coast, Australia",
+    "facilities": ["balcony", "fitness center", "24/7 security"],
+    "image": "https://i.ibb.co/Qd1ygdw/6.png"
+  },
+  {
+    "id": 7,
+    "estate_title": "Luxury Lakeside Retreat",
+    "segment_name": "Resorts",
+    "description": "Elegant lakeside resort featuring upscale accommodations and recreational activities.",
+    "price": "$4,000,000",
+    "status": "sale",
+    "area": "30 acres",
+    "location": "Lake Como, Italy",
+    "facilities": ["spa", "water sports", "gourmet dining"],
+    "image": "https://i.ibb.co/H7Kpphq/7.jpg"
+  },
+  {
+    "id": 8,
+    "estate_title": "Exotic Jungle Villa",
+    "segment_name": "Villas",
+    "description": "Secluded villa nestled in the jungle, offering tranquility and privacy.",
+    "price": "$1,500,000",
+    "status": "sale",
+    "area": "5000 sq ft",
+    "location": "Costa Rica",
+    "facilities": ["infinity pool", "outdoor dining area", "gardens"],
+    "image": "https://i.ibb.co/R9dbNPx/8.jpg"
+  },
+  {
+    "id": 9,
+    "estate_title": "Modern Urban Penthouse",
+    "segment_name": "Penthouse",
+    "description": "Contemporary penthouse located in the heart of the city, boasting city skyline views.",
+    "price": "$1,200,000",
+    "status": "rent",
+    "area": "2000 sq ft",
+    "location": "New York City",
+    "facilities": ["rooftop terrace", "fitness center", "concierge service"],
+    "image": "https://i.ibb.co/4KhY8nf/9.jpg"
+  }
+]
