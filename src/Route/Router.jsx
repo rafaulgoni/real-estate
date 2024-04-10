@@ -6,6 +6,7 @@ import Register from '../Auth/Register/Register'
 import Contact from "../Pages/Contact/Contact";
 import Error from "../Pages/Error/Error";
 import DetailsCard from "../Pages/detailsCard/DetailsCard";
+import Profile from "../Pages/Profile/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
           path:'/details/:id',
           element: <DetailsCard></DetailsCard>,
           loader: ()=> fetch('/FakeData.json'),
+        },
+        {
+          path:'/profile',
+          element: <Profile></Profile>,
         },
         {
           path: '/login',

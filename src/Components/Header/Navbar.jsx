@@ -8,6 +8,8 @@ const Navbar = () => {
         
         <li><NavLink to='/contact' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Contact Us</NavLink></li>
 
+        <li><NavLink to='/profile' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Profile</NavLink></li>
+
         <li><NavLink to='/login' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Log in</NavLink></li>
         
     </>
@@ -39,13 +41,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                        <li><a>Rafaul Goni Ansari</a></li>
-                        <li>
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
-                        </li>
+                        <li className="font-bold">Rafaul Goni Ansari</li>
                     </ul>
                 </div>
 

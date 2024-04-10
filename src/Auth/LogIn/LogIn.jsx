@@ -1,8 +1,27 @@
 import { Link } from "react-router-dom";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import 'animate.css';
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const LogIn = () => {
+    const { signIn } = useContext(AuthContext)
+    const [showPassword, setShowPassword] = useState(false)
+
+    const handleLogIn = e => {
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+
+        signIn(email, password)
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error =>{
+            console.error(error)
+        })
+    }
     return (
         <div>
             <div className="hero">
@@ -11,21 +30,29 @@ const LogIn = () => {
                         <h1 className="text-5xl font-bold animate__animated animate__backInDown">Login now!</h1>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 animate__animated animate__backInUp">
-                        <form className="card-body">
+                        <form onSubmit={handleLogIn} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" className="input input-bordered" required />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                                <div className="relative">
+                                <input type={showPassword ? "text" : "password"}
+                                    name="password"
+                                    placeholder="password"
+                                    className="input input-bordered w-full"
+                                    required />
+                                <samp className="absolute top-4 right-3" onClick={() => setShowPassword(!showPassword)}>
+                                    {
+                                        showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                    }
+                                </samp>
+                            </div>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn font-bold bg-[#F9A51A]">Login</button>
@@ -37,8 +64,8 @@ const LogIn = () => {
                     </div>
                     <div className=" space-y-2">
                         <div className="divider">Or</div>
-                        <button className="border border-blue-800 btn w-full text-blue-600 font-bold animate__animated animate__backInLeft"><FaGoogle/>Continue with Google</button>
-                        <button className="border border-black btn w-full font-bold animate__animated animate__backInRight"><FaGithub/>Continue with Github</button>
+                        <button className="border border-blue-800 btn w-full text-blue-600 font-bold animate__animated animate__backInLeft"><FaGoogle />Continue with Google</button>
+                        <button className="border border-black btn w-full font-bold animate__animated animate__backInRight"><FaGithub />Continue with Github</button>
                     </div>
                 </div>
             </div>
