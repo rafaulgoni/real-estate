@@ -7,6 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import Error from "../Pages/Error/Error";
 import DetailsCard from "../Pages/detailsCard/DetailsCard";
 import Profile from "../Pages/Profile/Profile";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'/details/:id',
-          element: <DetailsCard></DetailsCard>,
+          element: <PrivateRoute><DetailsCard></DetailsCard></PrivateRoute>,
           loader: ()=> fetch('/FakeData.json'),
         },
         {

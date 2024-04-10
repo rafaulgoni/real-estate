@@ -1,7 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import 'animate.css';
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () =>{
+        logOut()
+        .then()
+        .catch()
+    }
+
     const links = <>
     
         <li><NavLink to='/' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Home</NavLink></li>
@@ -10,8 +20,6 @@ const Navbar = () => {
 
         <li><NavLink to='/profile' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Profile</NavLink></li>
 
-        <li><NavLink to='/login' className={({ isActive }) => isActive ? ' font-bold border-2 p-2 rounded-xl border-[#F9A51A]' : 'font-family'}>Log in</NavLink></li>
-        
     </>
 
     return (
@@ -44,8 +52,9 @@ const Navbar = () => {
                         <li className="font-bold">Rafaul Goni Ansari</li>
                     </ul>
                 </div>
-
-                <a className="btn btn-sm font-bold bg-[#F9A51A]">Login</a>
+                {
+                    user ? <button onClick={handleSignOut} className="btn btn-sm font-bold bg-[#F9A51A]">Log Out</button> : <Link to='/login'><button className="btn btn-sm font-bold bg-[#F9A51A]">Log In</button></Link>
+                }
             </div>
         </div>
     );

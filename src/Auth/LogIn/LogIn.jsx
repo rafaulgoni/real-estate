@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import 'animate.css';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const LogIn = () => {
-    const { signIn } = useContext(AuthContext)
+    const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false)
+    const [error, setError] = useState("")
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const handleLogIn = e => {
         e.preventDefault()
@@ -14,13 +17,37 @@ const LogIn = () => {
         const password = e.target.password.value;
         console.log(email, password);
 
+        setError('')
         signIn(email, password)
-        .then(result =>{
-            console.log(result.user)
-        })
-        .catch(error =>{
-            console.error(error)
-        })
+            .then(result => {
+                console.log(result.user)
+                e.target.reset()
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                setError('invalid-credential')
+                console.error(error)
+            })
+    }
+    const handleGoogle = () => {
+        googleLogIn()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+    const handleGithub = () => {
+        githubLogIn()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
     return (
         <div>
@@ -42,18 +69,21 @@ const LogIn = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <div className="relative">
-                                <input type={showPassword ? "text" : "password"}
-                                    name="password"
-                                    placeholder="password"
-                                    className="input input-bordered w-full"
-                                    required />
-                                <samp className="absolute top-4 right-3" onClick={() => setShowPassword(!showPassword)}>
-                                    {
-                                        showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
-                                    }
-                                </samp>
+                                    <input type={showPassword ? "text" : "password"}
+                                        name="password"
+                                        placeholder="password"
+                                        className="input input-bordered w-full"
+                                        required />
+                                    <samp className="absolute top-4 right-3" onClick={() => setShowPassword(!showPassword)}>
+                                        {
+                                            showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                        }
+                                    </samp>
+                                </div>
                             </div>
-                            </div>
+                            {
+                                error && <small className="text-red-800">{error}</small>
+                            }
                             <div className="form-control mt-6">
                                 <button className="btn font-bold bg-[#F9A51A]">Login</button>
                             </div>
@@ -64,8 +94,8 @@ const LogIn = () => {
                     </div>
                     <div className=" space-y-2">
                         <div className="divider">Or</div>
-                        <button className="border border-blue-800 btn w-full text-blue-600 font-bold animate__animated animate__backInLeft"><FaGoogle />Continue with Google</button>
-                        <button className="border border-black btn w-full font-bold animate__animated animate__backInRight"><FaGithub />Continue with Github</button>
+                        <button onClick={handleGoogle} className="border border-blue-800 btn w-full text-blue-600 font-bold animate__animated animate__backInLeft"><FaGoogle />Continue with Google</button>
+                        <button onClick={handleGithub} className="border border-black btn w-full font-bold animate__animated animate__backInRight"><FaGithub />Continue with Github</button>
                     </div>
                 </div>
             </div>
