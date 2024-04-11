@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import 'animate.css';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const LogIn = () => {
     const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext)
@@ -51,6 +52,9 @@ const LogIn = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Luxe Havens | LogIn</title>
+            </Helmet>
             <div className="hero">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">

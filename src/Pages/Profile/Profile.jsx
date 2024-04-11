@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { IoCallOutline } from "react-icons/io5";
 import { IoMailOpenOutline } from "react-icons/io5";
 
 const Profile = () => {
     return (
         <div>
+            <Helmet>
+                <title>Luxe Havens | Profile</title>
+            </Helmet>
             <div className="card max-w-[450px] bg-base-100 shadow-xl mx-auto">
                 <figure className="px-10 pt-10">
                     <img src={'https://i.ibb.co/0G1BfzS/rafaul.jpg'} alt="Shoes" className=" w-72 h-72 rounded-full" />

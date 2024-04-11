@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { FaMapLocationDot } from 'react-icons/fa6';
 import { Link, useLoaderData } from 'react-router-dom';
 import { useParams } from "react-router-dom";
@@ -10,6 +11,9 @@ const DetailsCard = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Luxe Havens | Details</title>
+            </Helmet>
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure><img src={newsDetails.image} alt="Album" /></figure>
                 <div className="card-body">

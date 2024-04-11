@@ -1,8 +1,38 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Website Name: Luxe Haven's
 
-Currently, two official plugins are available:
+"Opulent Haven: Where Luxury Meets Lifestyle"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+
+
+## 🔗 Live Site URL:
+http://localhost:5175/
+
+## Resources:
+
+- [AOS Package](https://www.npmjs.com/package/aos)
+
+- [Animate.css](https://animate.style/)
+
+- [Swiper slider](https://swiperjs.com)
+
+- [Sweet Alert](https://sweetalert.js.org/guides/)
+
+
+## Author
+
+- [@rafaulgoni](https://github.com/rafaulgoni)
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install b9a9-real-estate-rafaulgoni
+  cd b9a9-real-estate-rafaulgoni
+```
+    

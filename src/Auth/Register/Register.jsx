@@ -5,6 +5,7 @@ import 'animate.css';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const navigate = useNavigate()
@@ -50,6 +51,9 @@ const Register = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Luxe Havens | Register</title>
+            </Helmet>
             <div className="hero bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center">

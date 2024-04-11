@@ -6,12 +6,16 @@ import IntroCard from "../../Components/Intro/IntroCard";
 import { useLoaderData } from 'react-router-dom'
 import Gallery from "../../Components/gallery/Gallery";
 import Update from "../../Components/Update/Update";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
 
     const card = useLoaderData();
     return (
         <div>
+            <Helmet>
+                <title>Luxe Havens | Home</title>
+            </Helmet>
             {/* banner section */}
             <div className=" relative">
                 <Banner></Banner>
