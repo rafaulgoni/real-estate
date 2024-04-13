@@ -9,7 +9,7 @@
 
 
 ## 🔗 Live Site URL:
-http://localhost:5175/
+ https://b9a9-real-estate-rafaulgoni.web.app
 
 ## Resources:
 
