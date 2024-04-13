@@ -8,6 +8,7 @@ import Error from "../Pages/Error/Error";
 import DetailsCard from "../Pages/detailsCard/DetailsCard";
 import Profile from "../Pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
+import Review from "../Pages/Review/Review";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
         {
           path:'/contact',
           element: <Contact></Contact>,
+        },
+        {
+          path:'/review',
+          element: <Review></Review>,
         }
       ]
     },

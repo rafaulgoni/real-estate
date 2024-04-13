@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const navigate = useNavigate()
-    const { createUser } = useContext(AuthContext)
+    const { createUser, updateUserProfile } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
     const [error, setError] = useState("")
@@ -23,7 +23,7 @@ const Register = () => {
         const confirmPassword = e.target.confirmPassword.value;
         console.log(name, photo, email, password, confirmPassword);
 
-        if (password.length < 6){
+        if (password.length < 6) {
             setError('password must be 6 characters')
             return
         }
@@ -31,7 +31,7 @@ const Register = () => {
             setError("password didn't match")
             return
         }
-        if(!/^(?=.*[a-z])(?=.*[A-Z]).{2,}$/.test(password)){
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).{2,}$/.test(password)) {
             setError('password must use in one uppercase and lowercase')
             return
         }
@@ -40,10 +40,12 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
-                e.target.reset()
-
-                swal("Good job!", "Your create an account success!", "success");
-                navigate('/login')
+                updateUserProfile(name, photo)
+                    .then(() => {
+                        e.target.reset()
+                        swal("Good job!", "Your create an account success!", "success");
+                        navigate('/')
+                    })
             })
             .catch(error => {
                 console.error(error)
