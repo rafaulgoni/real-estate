@@ -23,7 +23,7 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: name,
-            photoURL: image
+            photoURL: image,
         })
     }
 

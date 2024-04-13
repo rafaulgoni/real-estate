@@ -1,14 +1,16 @@
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const Agent = () => {
     return (
         <div>
             <section className="py-6 dark:bg-gray-100 dark:text-gray-800">
                 <div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
-                    <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">Agent team</p>
-                    <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">Meet Our Agents</h1>
+                    <p data-aos="zoom-in-down" data-aos-delay="500" className="p-2 text-sm font-medium tracking-wider text-center uppercase">Agent team</p>
+                    <h1 data-aos="zoom-in-down" data-aos-duration="1000" className="text-4xl font-bold leading-none text-center sm:text-5xl">Meet Our Agents</h1>
                     <div className="flex flex-row flex-wrap-reverse justify-center mt-8">
-                        <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
+                        <div data-aos="zoom-in-down" data-aos-delay="1000" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
                             <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={'https://i.ibb.co/T0bwL4b/agent-three0.jpg'} />
                             <div className="flex-1 my-4">
                                 <p className="text-xl font-semibold leading-snug">John Michael Smith</p>
@@ -38,7 +40,7 @@ const Agent = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
+                        <div data-aos="zoom-in-down" data-aos-delay="1400" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
                             <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={'https://i.ibb.co/Cbx9YRZ/agent1-four.png'} />
                             <div className="flex-1 my-4">
                                 <p className="text-xl font-semibold leading-snug">Emily Anne Parker</p>
@@ -68,7 +70,7 @@ const Agent = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
+                        <div data-aos="zoom-in-down" data-aos-delay="1600" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
                             <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={'https://i.ibb.co/5RGhYYT/agent-one.jpg'} />
                             <div className="flex-1 my-4">
                                 <p className="text-xl font-semibold leading-snug">David William</p>
@@ -98,7 +100,7 @@ const Agent = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
+                        <div data-aos="zoom-in-down" data-aos-delay="1800" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100">
                             <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={'https://i.ibb.co/xSpKT2h/agent-two-removebg-preview.png'} />
                             <div className="flex-1 my-4">
                                 <p className="text-xl font-semibold leading-snug">Michael James</p>
